@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.vogella.android.colorfinder.MainActivity">
+    <item
+        android:id="@+id/saveButton"
+        android:checkable="true"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="Save Color"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/selectButton"
+        android:checkable="true"
+        android:enabled="true"
+        android:orderInCategory="2"
+        android:title="Choose Color"
+        android:visible="true"
+        app:showAsAction="ifRoom"/>
+</menu>

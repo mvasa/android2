@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ColorFinder</string>
+    <string name="seekLength">255</string>
+    <string name="red">Red</string>
+    <string name="Green">Green</string>
+    <string name="Blue">Blue</string>
+</resources>

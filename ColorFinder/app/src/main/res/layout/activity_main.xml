@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vogella.android.colorfinder.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:id = "@+id/taco"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+
+    <TextView
+        android:id="@+id/color1"
+        android:layout_width="80dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="___"
+        app:layout_constraintBottom_toTopOf="@+id/color2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorBox"
+        app:layout_constraintVertical_bias="0.519" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="171dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="20dp"
+        android:max="@string/seekLength"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar2"
+        app:layout_constraintEnd_toStartOf="@+id/color1"
+        app:layout_constraintTop_toBottomOf="@+id/colorBox" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="171dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="8dp"
+        android:max="@string/seekLength"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar3"
+        app:layout_constraintEnd_toStartOf="@+id/color2" />
+
+    <TextView
+        android:id="@+id/color2"
+        android:layout_width="80dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="16dp"
+        android:text="___"
+        app:layout_constraintBottom_toTopOf="@+id/color3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="171dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="8dp"
+        android:max="@string/seekLength"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/color3" />
+
+
+    <TextView
+        android:id="@+id/color3"
+        android:layout_width="80dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="16dp"
+        android:text="___"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/colorBox"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taco" />
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="56dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/red"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="62dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/Green"
+        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <TextView
+        android:id="@+id/editText3"
+        android:layout_width="56dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/Blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/colorPicker"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/colorBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taco"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="517dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="268dp"
+        tools:layout_editor_absoluteY="517dp" />
+
+</android.support.constraint.ConstraintLayout>
